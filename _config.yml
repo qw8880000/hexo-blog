@@ -3,16 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
+title: Nicer's blog
+subtitle: 王锦乐的个人博客
 description:
-author: John Doe
-language:
+author: JinleWang
+language: zh-CN
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://blog.wangjinle.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
