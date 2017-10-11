@@ -51,19 +51,19 @@ notification: |-
 social:
  - name: Github
    icon: git
-   href: //github.com/qw8880000
- # - name: 邮箱
-   # icon: envelope-o
-   # href: mailto:snippet@91h5.cc
- # - name: 联系QQ
-   # icon: qq
-   # href: /
- # - name: 微博
-   # icon: weibo
-   # href: /
- # - name: QQ群
-   # icon: users
-   # href: /
+   href: //github.com/shenliyang
+ - name: 邮箱
+   icon: envelope-o
+   href: mailto:snippet@91h5.cc
+ - name: 联系QQ
+   icon: qq
+   href: /
+ - name: 微博
+   icon: weibo
+   href: /
+ - name: QQ群
+   icon: users
+   href: /
  - name: RSS
    icon: feed
    href: /atom.xml
@@ -147,7 +147,7 @@ gitment:
 
 ###友言评论
 uyan:
-  enable: false
+  enable: true
   uyan_id: 1966422
 
 
