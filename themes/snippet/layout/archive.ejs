@@ -1,0 +1,16 @@
+<div id="main">
+  <div id="post-list">
+    <ul class="archives-post-list">
+    	<h1 class="info"><%= page.year %>年 <%= page.month %>月</h1>
+        <% page.posts.each(function(post){ %>
+          <li class="post-items" _href="<%- url_for(post.path)%>">
+            <h3 class="post-item-title">
+            	<a href="<%- url_for(post.path)%>"> <%= post.title%> </a>
+            </h3>  
+          </li>
+        <% }) %>
+    </ul>
+  </div>
+</div>
+<%- partial('_partial/pagination')%>
+
