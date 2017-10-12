@@ -1,11 +1,15 @@
 ---
 title: linux boxes
+categories:
+- 技术
+- linux
+tags:
+- linux
+- tools
 ---
+linux 下的ASCII art
+<!-- more -->
 
-boxes
-=========================
-
- 
 > Boxes is a command line program that draws a box around its input text. It can remove and repair those boxes, too. You can easily make your own box designs if you wish, but many designs are already provided.
     
 
