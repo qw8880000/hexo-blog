@@ -19,6 +19,7 @@ module.exports = function(grunt) {
         }
       }
     },
+
     copy: {
       main: {
         files: [{
@@ -27,18 +28,28 @@ module.exports = function(grunt) {
           src: '**/*.md',
           dest: '<%= pathConfig.posts %>',
           filter: function(filepath) {
-            var patterns = ['nicer'];
+            var patterns = ['---\ntitle:'];
             var matchRegex = function(filepath, patterns) {
               var content = grunt.file.read(filepath);
 
               return patterns.some(function(pattern){
-                var regex = new RegExp(pattern);
+                var regex = new RegExp(pattern, 'm');
                 return regex.test(content);
               });
             };
             return matchRegex(filepath, patterns);
           },
         }],
+      },
+    },
+
+    watch: {
+      raw: {
+        files: ['<%= pathConfig.raw %>/**.*.md'],
+        task: ['copy:main'],
+        options: {
+          spawn: false,
+        },
       },
     },
 
@@ -57,6 +68,10 @@ module.exports = function(grunt) {
 
   grunt.registerTask('clone', [
     'gitclone:JustBook'
+  ]);
+
+  grunt.registerTask('default', [
+    'watch',
   ]);
 
 };
