@@ -45,11 +45,18 @@ module.exports = function(grunt) {
 
     watch: {
       raw: {
-        files: ['<%= pathConfig.raw %>/**.*.md'],
+        files: ['<%= pathConfig.raw %>/**/*.md'],
         task: ['copy:main'],
         options: {
-          spawn: false,
+          // spawn: false,
         },
+      },
+    },
+
+    bgShell: {
+      hexo: {
+        cmd: 'hexo server',
+        bg: true,
       },
     },
 
@@ -71,6 +78,7 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('default', [
+    'bgShell',
     'watch',
   ]);
 
