@@ -20,6 +20,12 @@ module.exports = function(grunt) {
       }
     },
 
+    clean: {
+      posts: {
+        src: ['<%= pathConfig.posts %>/**/*.md'],
+      },
+    },
+
     copy: {
       main: {
         files: [{
@@ -28,12 +34,14 @@ module.exports = function(grunt) {
           src: '**/*.md',
           dest: '<%= pathConfig.posts %>',
           filter: function(filepath) {
-            var patterns = ['---\ntitle:'];
+            // var patterns = ['---\ntitle:'];
+            var patterns = ['^---$'];
             var matchRegex = function(filepath, patterns) {
               var content = grunt.file.read(filepath);
 
               return patterns.some(function(pattern){
                 var regex = new RegExp(pattern, 'm');
+                // var regex = new RegExp(pattern);
                 return regex.test(content);
               });
             };
@@ -46,7 +54,7 @@ module.exports = function(grunt) {
     watch: {
       raw: {
         files: ['<%= pathConfig.raw %>/**/*.md'],
-        task: ['copy:main'],
+        tasks: ['copy:main'],
         options: {
           // spawn: false,
         },
@@ -78,6 +86,7 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('default', [
+    'clean',
     'copy:main',
     'bgShell',
     'watch',
