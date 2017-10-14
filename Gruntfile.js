@@ -6,7 +6,8 @@ module.exports = function(grunt) {
   var config = {
     pkg: grunt.file.readJSON('package.json'),
     pathConfig: {
-      blog_raw: 'blog_raw',
+      raw: 'raw',
+      posts: 'source/_posts',
     },
 
     gitclone: {
@@ -14,10 +15,33 @@ module.exports = function(grunt) {
         options: {
           repository: 'git@github.com:qw8880000/JustBook.git',
           branch: 'master',
-          directory: '<%= pathConfig.blog_raw %>/JustBook'
+          directory: '<%= pathConfig.raw %>/JustBook'
         }
       }
     },
+    copy: {
+      main: {
+        files: [{
+          expand: true,
+          cwd: '<%= pathConfig.raw %>',
+          src: '**/*.md',
+          dest: '<%= pathConfig.posts %>',
+          filter: function(filepath) {
+            var patterns = ['nicer'];
+            var matchRegex = function(filepath, patterns) {
+              var content = grunt.file.read(filepath);
+
+              return patterns.some(function(pattern){
+                var regex = new RegExp(pattern);
+                return regex.test(content);
+              });
+            };
+            return matchRegex(filepath, patterns);
+          },
+        }],
+      },
+    },
+
   };
 
   grunt.initConfig(config);
