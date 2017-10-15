@@ -92,5 +92,10 @@ module.exports = function(grunt) {
     'watch',
   ]);
 
+  grunt.registerTask('build', [
+    'gitclone:pull',
+    'clean',
+  ]);
+
 };
 
