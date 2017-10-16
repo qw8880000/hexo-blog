@@ -25,6 +25,7 @@
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-git": "^1.0.7",
+    "grunt-shell": "^2.1.0",
     "hexo-util": "^0.6.1",
     "load-grunt-tasks": "^3.5.2"
   }

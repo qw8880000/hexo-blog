@@ -62,17 +62,22 @@ module.exports = function(grunt) {
     },
 
     bgShell: {
-      hexo: {
+      hexoServer: {
         cmd: 'hexo server',
         bg: true,
       },
+      
+    },
+
+    shell: {
+      gitPull: {
+        command: 'cd ./raw/JustBook && git pull'
+      },
       hexoGenerate: {
-        cmd: 'hexo g',
-        bg: false,
+        command: 'hexo g',
       },
       hexoClean: {
-        cmd: 'hexo clean',
-        bg: false,
+        command: 'hexo clean',
       },
     },
 
@@ -89,22 +94,23 @@ module.exports = function(grunt) {
   // so we don't need to excute 'grunt.loadNpmTasks('grunt-*')'
   require('load-grunt-tasks')(grunt);
 
-  grunt.registerTask('clone', [
+  grunt.registerTask('init', [
     'gitclone:JustBook'
   ]);
 
   grunt.registerTask('default', [
     'clean',
     'copy:main',
-    'bgShell:hexo',
+    'bgShell:hexoServer',
     'watch',
   ]);
 
   grunt.registerTask('build', [
     'clean',
+    'shell:gitPull',
     'copy:main',
-    'bgShell:hexoClean',
-    'bgShell:hexoGenerate',
+    'shell:hexoClean',
+    'shell:hexoGenerate',
   ]);
 
 };
