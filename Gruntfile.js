@@ -110,14 +110,12 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('default', [
-    'clean',
     'copy:main',
     'bgShell:hexoServer',
     'watch',
   ]);
 
   grunt.registerTask('build', [
-    'clean',
     'shell:gitPull',
     'copy:main',
     'shell:hexoClean',
