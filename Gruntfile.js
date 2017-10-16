@@ -70,6 +70,10 @@ module.exports = function(grunt) {
         cmd: 'hexo g',
         bg: false,
       },
+      hexoClean: {
+        cmd: 'hexo clean',
+        bg: false,
+      },
     },
 
   };
@@ -99,6 +103,7 @@ module.exports = function(grunt) {
   grunt.registerTask('build', [
     'clean',
     'copy:main',
+    'bgShell:hexoClean',
     'bgShell:hexoGenerate',
   ]);
 
