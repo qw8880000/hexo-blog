@@ -22,7 +22,7 @@ module.exports = function(grunt) {
 
     clean: {
       posts: {
-        src: ['<%= pathConfig.posts %>/**/*.md'],
+        src: ['<%= pathConfig.posts %>/'],
       },
     },
 
@@ -66,6 +66,10 @@ module.exports = function(grunt) {
         cmd: 'hexo server',
         bg: true,
       },
+      hexoGenerate: {
+        cmd: 'hexo g',
+        bg: false,
+      },
     },
 
   };
@@ -88,13 +92,14 @@ module.exports = function(grunt) {
   grunt.registerTask('default', [
     'clean',
     'copy:main',
-    'bgShell',
+    'bgShell:hexo',
     'watch',
   ]);
 
   grunt.registerTask('build', [
-    'gitclone:pull',
     'clean',
+    'copy:main',
+    'bgShell:hexoGenerate',
   ]);
 
 };
