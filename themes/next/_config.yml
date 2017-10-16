@@ -52,6 +52,9 @@ footer:
   # -------------------------------------------------------------
   # Any custom text can be defined here.
   #custom_text: Hosted by <a target="_blank" href="https://pages.github.com">GitHub Pages</a>
+  # -------------------------------------------------------------
+  # visitors count
+  counter: true
 
 # ---------------------------------------------------------------
 # SEO Settings
