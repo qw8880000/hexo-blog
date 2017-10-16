@@ -2,9 +2,10 @@
 title: 有趣的ASCII-Art
 date: 2017-10-16 14:39:25
 categories:
-- 编程
+  - 编程
 tags:
-- ascii art
+  - ascii art
+abbrlink: d73feb704e1070e4
 ---
 
 ascii-art(文本艺术): 使用可显示的ASCII字符组成的图形。

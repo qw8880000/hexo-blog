@@ -2,9 +2,10 @@
 title: C语言推荐书单
 date: 2017-10-15 14:39:25
 categories:
-- 编程
+  - 编程
 tags:
-- c语言
+  - c语言
+abbrlink: 5eefc991
 ---
 
 

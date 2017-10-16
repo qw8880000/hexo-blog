@@ -33,6 +33,7 @@ module.exports = function(grunt) {
           cwd: '<%= pathConfig.raw %>',
           src: '**/*.md',
           dest: '<%= pathConfig.posts %>',
+          flatten: true,
           filter: function(filepath) {
             // var patterns = ['---\ntitle:'];
             var patterns = ['^---$'];
@@ -88,6 +89,21 @@ module.exports = function(grunt) {
       },
     },
 
+    rewrite: {
+      abbrlink: {
+        src: '<%= pathConfig.raw %>/**/*.md',
+        editor: function(contents, filepath){
+          const crypto = require('crypto');
+          const hash = crypto.createHash('sha256');
+
+          hash.update(contents);
+          var hashValue = hash.digest('hex');
+
+          return contents.replace(/@@abbrlink/g, hashValue.substring(0, 16));
+        }
+      },
+    },
+
   };
 
   grunt.initConfig(config);
@@ -109,19 +125,23 @@ module.exports = function(grunt) {
     'shell:gitPushRaw',
   ]);
 
-  grunt.registerTask('default', [
+  grunt.registerTask('RawToPosts', [
+    'rewrite:abbrlink',
     'copy:main',
+  ]);
+
+  grunt.registerTask('default', [
+    'RawToPosts',
     'bgShell:hexoServer',
     'watch',
   ]);
 
   grunt.registerTask('build', [
     'shell:gitPull',
-    'copy:main',
+    'RawToPosts',
     'shell:hexoClean',
     'shell:hexoGenerate',
   ]);
-
 
 };
 

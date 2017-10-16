@@ -2,11 +2,12 @@
 title: 像极客一样写作
 date: 2017-10-14 14:39:25
 categories:
-- 杂记
+  - 杂记
 tags:
-- git
-- markdown
-- 写作
+  - git
+  - markdown
+  - 写作
+abbrlink: c52f3bf4214af8ab
 ---
 
 回顾一下我做笔记过程：
