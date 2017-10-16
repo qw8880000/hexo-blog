@@ -73,6 +73,13 @@ module.exports = function(grunt) {
       gitPull: {
         command: 'cd ./raw/JustBook && git pull'
       },
+      gitPush: {
+        command: 'git add ./ && git ci -m "new post" && git push'
+      },
+      gitPushRaw: {
+        command: 'cd ./raw/JustBook && git add ./ && git ci -m "new post" && git push'
+      },
+
       hexoGenerate: {
         command: 'hexo g',
       },
@@ -97,6 +104,10 @@ module.exports = function(grunt) {
   grunt.registerTask('init', [
     'gitclone:JustBook'
   ]);
+  grunt.registerTask('push', [
+    'shell:gitPush',
+    'shell:gitPushRaw',
+  ]);
 
   grunt.registerTask('default', [
     'clean',
@@ -112,6 +123,7 @@ module.exports = function(grunt) {
     'shell:hexoClean',
     'shell:hexoGenerate',
   ]);
+
 
 };
 
