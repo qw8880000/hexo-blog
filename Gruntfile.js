@@ -10,16 +10,6 @@ module.exports = function(grunt) {
       posts: 'source/_posts',
     },
 
-    gitclone: {
-      JustBook: {
-        options: {
-          repository: 'git@github.com:qw8880000/JustBook.git',
-          branch: 'master',
-          directory: '<%= pathConfig.raw %>/JustBook'
-        }
-      }
-    },
-
     clean: {
       posts: {
         src: ['<%= pathConfig.posts %>/'],
@@ -71,6 +61,9 @@ module.exports = function(grunt) {
     },
 
     shell: {
+      gitClone: {
+        command: 'git clone git@github.com:qw8880000/JustBook.git <%= pathConfig.raw %>/JustBook'
+      },
       gitPull: {
         command: 'cd ./raw/JustBook && git pull'
       },
@@ -118,7 +111,7 @@ module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
 
   grunt.registerTask('init', [
-    'gitclone:JustBook'
+    'shell:gitClone'
   ]);
   grunt.registerTask('push', [
     'shell:gitPush',
