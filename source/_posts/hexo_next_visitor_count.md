@@ -1,5 +1,5 @@
 ---
-title: 网站访问量统计 - hexo next主题
+title: 网站访问量统计 | hexo
 date: 2017-10-17 15:50:47
 categories:
     - 编程
@@ -9,8 +9,7 @@ tags:
 abbrlink: 916d83182e15eeb1
 ---
 
-
-这里使用的是[不蒜子]提供的阅读统计功能。
+这里使用的是[不蒜子]提供的阅读统计功能，使用的hexo主题是next。
 ![image](http://oxnimkw03.bkt.clouddn.com/20171017172318.png)
 
 以下是方法。
