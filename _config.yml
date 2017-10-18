@@ -99,5 +99,6 @@ baidusitemap:
 nofollow:
 	enable: true
 	exclude:
-    - wangjinle.com
+		- wangjinle.com
+
 

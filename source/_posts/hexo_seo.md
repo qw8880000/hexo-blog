@@ -58,9 +58,9 @@ npm install hexo-autonofollow --save
 * 然后，编辑站点配置文件`_config.yml`，加入配置
 ```
 nofollow:
-	enable: true
-	exclude:
-    - wangjinle.com
+    enable: true
+    exclude:
+        - wangjinle.com
 ```
 这里，我的域名是`wangjinle.com`，把自己想保留的域名加在`exclude`字段里。
 
