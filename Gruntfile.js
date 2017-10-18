@@ -65,6 +65,9 @@ module.exports = function(grunt) {
         command: 'git clone git@github.com:qw8880000/JustBook.git <%= pathConfig.raw %>/JustBook'
       },
       gitPull: {
+        command: 'git pull'
+      },
+      gitPullRaw: {
         command: 'cd ./raw/JustBook && git pull'
       },
       gitPush: {
@@ -117,6 +120,10 @@ module.exports = function(grunt) {
     'shell:gitPush',
     'shell:gitPushRaw',
   ]);
+  grunt.registerTask('pull', [
+    'shell:gitPull',
+    'shell:gitPullRaw',
+  ]);
 
   grunt.registerTask('RawToPosts', [
     'rewrite:abbrlink',
@@ -130,7 +137,7 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('build', [
-    'shell:gitPull',
+    'shell:gitPullRaw',
     'RawToPosts',
     'shell:hexoClean',
     'shell:hexoGenerate',
