@@ -95,4 +95,9 @@ sitemap:
 baidusitemap:
     path: baidusitemap.xml
 
+# nofollow
+nofollow:
+	enable: true
+	exclude:
+    - wangjinle.com
 
