@@ -43,8 +43,28 @@ abbrlink: 27104d21b87c0633
 
 这里我们选择`sitemap`方式。
 
+* 安装hexo的sitemap网站地图生成插件
+```
+npm install hexo-generator-baidu-sitemap --save
+```
+
+* 在你的hexo站点的`_config.yml`添加下面的代码
+```
+# hexo sitemap网站地图
+baidusitemap:
+    path: baidusitemap.xml
+```
+
+* 配置成功后，hexo编译时会在hexo站点根目录生成`baidusitemap.xml`，部署网站后，提交到百度：
+
+![image](http://oxnimkw03.bkt.clouddn.com/20171018150633.png)
+
+
+完成上述步骤后，我们可以在百度搜索框里输入`site:wangjinle.com`(这里换成你自己的域名)，来查看收录情况。
+
 ## 如何被谷歌收录
 
+方法同上。
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
