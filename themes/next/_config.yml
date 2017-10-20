@@ -64,6 +64,7 @@ canonical: true
 
 # Change headers hierarchy on site-subtitle (will be main site description) and on all post/pages titles for better SEO-optimization.
 seo: true
+signature: 大道至简 知易行难
 
 # If true, will add site-subtitle to index page, added in main hexo config.
 # subtitle: Subtitle
