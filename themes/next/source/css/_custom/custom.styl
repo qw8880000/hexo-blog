@@ -1,1 +1,12 @@
 // Custom styles.
+
+if hexo-config("custom_css.post_body_a.enable")
+  .post-body p 
+      a{
+        color: convert(hexo-config("custom_css.post_body_a.normal_color"));
+        border-bottom: none;
+        &:hover {
+          color: convert(hexo-config("custom_css.post_body_a.hover_color"));
+          text-decoration: underline;
+        }
+      }
