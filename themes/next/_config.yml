@@ -740,4 +740,9 @@ custom_css:
     enable: true
     normal_color: "#0593d3"
     hover_color: "#0477ab"
+  # the style of post header link
+  post_meta_a: 
+    enable: true
+    normal_color: "#0593d3"
+    hover_color: "#0477ab"
 
