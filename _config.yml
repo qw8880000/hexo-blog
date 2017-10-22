@@ -102,5 +102,18 @@ nofollow:
 		- wangjinle.com
 
 # A plugin for Hexo that optimizes HTML, CSS, JS and imagages
-all_minifier: true
+all_minifier: false
+
+asset_pipeline:
+  revisioning:
+    enable: false
+  clean_css:
+    enable: true
+  uglify_js:
+    enable: true
+  imagemin:
+    enable: true
+  html_minifier:
+    enable: true
+
 
