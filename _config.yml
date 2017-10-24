@@ -89,6 +89,10 @@ search:
     format: html
     limit: 10000
 	
+#------------------------------------------------
+# plugins
+#------------------------------------------------
+
 # hexo sitemap网站地图
 sitemap:
     path: sitemap.xml
@@ -103,3 +107,5 @@ nofollow:
 
 # A plugin for Hexo that optimizes HTML, CSS, JS and imagages
 all_minifier: true
+
+
