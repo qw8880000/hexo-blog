@@ -18,10 +18,11 @@
     "hexo-generator-tag": "^0.2.0",
     "hexo-renderer-ejs": "^0.3.1",
     "hexo-renderer-less": "^0.2.0",
-    "hexo-renderer-marked": "^0.3.0",
+    "hexo-renderer-markdown-it-plus": "^1.0.2",
     "hexo-renderer-stylus": "^0.3.1",
     "hexo-server": "^0.2.0",
-    "hexo-util": "^0.6.1"
+    "hexo-util": "^0.6.1",
+    "markdown-it-synapse-table": "^1.0.6"
   },
   "devDependencies": {
     "grunt": "~0.4.0",

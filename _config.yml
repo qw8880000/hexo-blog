@@ -108,4 +108,19 @@ nofollow:
 # A plugin for Hexo that optimizes HTML, CSS, JS and imagages
 all_minifier: true
 
+# markdown_it_plus:
+markdown_it_plus:
+    highlight: true
+    html: true
+    xhtmlOut: true
+    breaks: true
+    langPrefix:
+    linkify: true
+    typographer:
+    quotes: “”‘’
+    pre_class: highlight
+    plugins:
+        - plugin:
+            name: markdown-it-synapse-table
+            enable: enable
 
