@@ -1,1 +1,23 @@
 // Custom styles.
+
+if hexo-config("custom_css.post_body_a.enable")
+  .post-body
+    a{
+      color: convert(hexo-config("custom_css.post_body_a.normal_color"));
+      border-bottom: none;
+      &:hover {
+        color: convert(hexo-config("custom_css.post_body_a.hover_color"));
+        text-decoration: underline;
+      }
+    }
+
+if hexo-config("custom_css.post_meta_a.enable")
+  .post-meta
+    a{
+      color: convert(hexo-config("custom_css.post_meta_a.normal_color"));
+      border-bottom: none;
+      &:hover {
+        color: convert(hexo-config("custom_css.post_meta_a.hover_color"));
+        text-decoration: underline;
+      }
+    }
