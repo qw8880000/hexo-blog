@@ -31,6 +31,7 @@
     "grunt-contrib-watch": "^1.0.0",
     "grunt-rewrite": "^1.0.1",
     "grunt-shell": "^2.1.0",
+    "grunt-zip": "^0.17.1",
     "load-grunt-tasks": "^3.5.2"
   }
 }

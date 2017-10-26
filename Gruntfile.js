@@ -100,6 +100,15 @@ module.exports = function(grunt) {
       },
     },
 
+    zip: {
+      dist: {
+        src: [
+          'public/**/*',
+        ],
+        dest: 'blog.zip'
+      }
+    }
+
   };
 
   grunt.initConfig(config);
@@ -141,6 +150,7 @@ module.exports = function(grunt) {
     'RawToPosts',
     'shell:hexoClean',
     'shell:hexoGenerate',
+    'zip:dist'
   ]);
 
 };
