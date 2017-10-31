@@ -231,13 +231,13 @@ wechat_subscriber:
 
 # Reward
 reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
-wechatpay: /images/wechatpay.png
+# wechatpay: /images/wechatpay.png
 #alipay: /images/alipay.jpg
 #bitcoin: /images/bitcoin.png
 
 # Declare license on posts
 post_copyright:
-  enable: false
+  enable: true
   license: CC BY-NC-SA 3.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
 
