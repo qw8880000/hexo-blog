@@ -140,6 +140,7 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('default', [
+    'clean:posts',
     'RawToPosts',
     'bgShell:hexoServer',
     'watch',
@@ -147,6 +148,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('build', [
     'shell:gitPullRaw',
+    'clean:posts',
     'RawToPosts',
     'shell:hexoClean',
     'shell:hexoGenerate',
