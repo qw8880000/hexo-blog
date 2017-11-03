@@ -281,7 +281,7 @@ highlight_theme: night
 # Arial | Tahoma | Helvetica | Times New Roman | Courier New | Verdana | Georgia | Palatino | Garamond | Comic Sans MS | Trebuchet MS
 # ---------------------------------------------------------------
 font:
-  enable: false
+  enable: true
 
   # Uri of fonts host. E.g. //fonts.googleapis.com (Default).
   host:
@@ -749,4 +749,9 @@ custom_css:
     enable: true
     normal_color: "#0593d3"
     hover_color: "#0477ab"
+  # the style of post body h1
+  post_body_h1:
+    enable: true
+  post_body_h2:
+    enable: true
 

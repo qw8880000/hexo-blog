@@ -21,3 +21,21 @@ if hexo-config("custom_css.post_meta_a.enable")
         text-decoration: underline;
       }
     }
+
+if hexo-config("custom_css.post_body_h1.enable")
+  .posts-expand .post-body
+    h1{
+      border-bottom: 3px solid #00a3cf;
+      /* background-color: rgb(243, 243, 243); */
+      /* box-shadow: rgb(153, 153, 153) 1px 1px 2px; */
+      padding: 5px 0 5px 10px;
+    }
+
+if hexo-config("custom_css.post_body_h2.enable")
+  .posts-expand .post-body
+    h2{
+      border-left: 3px solid #00a566;
+      padding: 0 0 0 10px;
+      margin-left: 10px;
+    }
+
