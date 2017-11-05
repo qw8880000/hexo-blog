@@ -135,6 +135,7 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('RawToPosts', [
+    'shell:gitPullRaw',
     'rewrite:abbrlink',
     'copy:main',
   ]);
@@ -147,7 +148,6 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('build', [
-    'shell:gitPullRaw',
     'clean:posts',
     'RawToPosts',
     'shell:hexoClean',
