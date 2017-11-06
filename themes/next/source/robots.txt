@@ -8,6 +8,6 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: http://blog.wangjinle.com/sitemap.xml
-Sitemap: http://blog.wangjinle.com/baidusitemap.xml
+Sitemap: http://www.wangjinle.com/sitemap.xml
+Sitemap: http://www.wangjinle.com/baidusitemap.xml
 
