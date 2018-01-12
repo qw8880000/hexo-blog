@@ -34,6 +34,7 @@ post:
   wordcount: Кол-во слов в статье
   min2read: Время чтения в минутах
   totalcount: Общее кол-во слов в записях
+  totaltime: Время чтения всего сайта
   copyright:
     author: Автор записи
     link: Ссылка на запись

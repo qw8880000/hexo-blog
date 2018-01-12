@@ -35,6 +35,7 @@ post:
   wordcount: Numero di parole nell'articolo
   min2read: Tempo di lettura
   totalcount: Numero totale di parole
+  totaltime: Site reading time
   copyright:
     author: Autore
     link: Link
