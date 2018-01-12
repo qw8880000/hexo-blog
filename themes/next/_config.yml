@@ -47,7 +47,7 @@ footer:
   icon: user
 
   # If not defined, will be used `author` from Hexo main config.
-  copyright: JinleWang
+  copyright: Jinle Wong
   # -------------------------------------------------------------
   # Hexo link (Powered by Hexo).
   powered: true
@@ -101,7 +101,7 @@ menu:
 # Enable/Disable menu icons / item badges.
 menu_settings:
   icons: true
-  badges: false
+  badges: true
 
 # ---------------------------------------------------------------
 # Scheme Settings
@@ -109,9 +109,9 @@ menu_settings:
 
 # Schemes
 # scheme: Muse
-scheme: Mist
+# scheme: Mist
 #scheme: Pisces
-#scheme: Gemini
+scheme: Gemini
 
 
 # ---------------------------------------------------------------
@@ -243,7 +243,7 @@ symbols_count_time:
 
 # Wechat Subscriber
 wechat_subscriber:
-  enabled: true
+  enabled: false
   qcode: /images/wechat-qcode.jpg
   description: 欢迎关注我的微信公众号!
 
@@ -647,7 +647,7 @@ tabs:
 # Reading progress bar
 # Dependencies: https://github.com/theme-next/theme-next-reading-progress
 reading_progress:
-  enable: false
+  enable: true
   color: "#37c6c0"
   height: 2px
 
@@ -845,7 +845,7 @@ custom_css:
     normal_color: "#0593d3"
     hover_color: "#0477ab"
   # the style of post header link
-  post_meta_a: 
+  post_meta_a:
     enable: true
     normal_color: "#0593d3"
     hover_color: "#0477ab"
