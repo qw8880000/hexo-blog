@@ -147,7 +147,7 @@ social_icons:
 # Usage: `permalink || title`
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the title and aria-label name.
-#github_banner: https://github.com/yourname || Follow me on GitHub
+github_banner: https://github.com/qw8880000 || Follow me on GitHub
 
 # Blog rolls
 links_icon: link
