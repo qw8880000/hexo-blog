@@ -135,8 +135,7 @@
             </div>
           {% endif %}
 
-          <!-- categories -->
-          {% include '../_custom/_partials/categories.swig' %}
+
 
         </div>
       </section>
@@ -171,6 +170,9 @@
           {% endif %}
         </div>
       {% endif %}
+
+       <!-- categories -->
+       {% include '../_custom/_partials/categories.swig' %}
 
     </div>
   </aside>

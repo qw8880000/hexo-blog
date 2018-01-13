@@ -111,7 +111,8 @@ menu_settings:
 # scheme: Muse
 # scheme: Mist
 #scheme: Pisces
-scheme: Gemini
+#scheme: Gemini
+scheme: GeminiEx
 
 
 # ---------------------------------------------------------------
