@@ -836,20 +836,3 @@ version: 6.0.1
 #! custom
 #! ---------------------------------------------------------------
 
-custom_css:
-  # the style of post body link
-  post_body_a:
-    enable: true
-    normal_color: "#0593d3"
-    hover_color: "#0477ab"
-  # the style of post header link
-  post_meta_a:
-    enable: true
-    normal_color: "#0593d3"
-    hover_color: "#0477ab"
-  # the style of post body h1
-  post_body_h1:
-    enable: true
-  post_body_h2:
-    enable: true
-

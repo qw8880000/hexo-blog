@@ -1,6 +1,11 @@
 @import "../Gemini/index.styl";
 
 
+$geminiex_link_normal   = #0593d3
+$geminiex_link_active   = #0477ab
+$geminiex_sidebar_item_margin_top = 10px;
+
+
 /*--- 去除affix效果 ---*/
 .affix.affix.affix { position: static; }
 .sidebar-inner {
@@ -10,5 +15,88 @@
 
   &.affix-bottom {
     position: static;
+  }
+}
+
+/*--- 链接样式 ---*/
+.post-body
+  a{
+    color: $geminiex_link_normal;
+    border-bottom: none;
+    &:hover {
+      color: $geminiex_link_normal;
+      text-decoration: underline;
+    }
+  }
+
+.post-meta
+  a{
+    color: $geminiex_link_normal;
+    border-bottom: none;
+    &:hover {
+      color: $geminiex_link_normal;
+      text-decoration: underline;
+    }
+  }
+
+/*--- 标题样式 ---*/
+.posts-expand .post-body
+  h1{
+    border-bottom: 3px solid #00a3cf;
+    /* background-color: rgb(243, 243, 243); */
+    /* box-shadow: rgb(153, 153, 153) 1px 1px 2px; */
+    padding: 5px 0 5px 10px;
+  }
+  h2{
+    border-left: 3px solid #00a566;
+    padding: 0 0 0 10px;
+    margin-left: 10px;
+  }
+
+
+/*--- sidebar in category ---*/
+.sidebar-category{
+
+  margin-top: $geminiex_sidebar_item_margin_top;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #fff;
+
+  .sidebar-category-list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .sidebar-category-list-item{
+    display: block;
+    margin: 0 10px;
+    list-style: none;
+  }
+  .sidebar-category-list-link{
+    /* display: block; */
+    display: inline-block;
+    font-size: 13px;
+    line-height: inherit;
+    border-bottom: 1px solid $menu-link-border;
+    transition-property: border-color;
+    the-transition();
+
+    &:hover { border-bottom-color: $menu-link-hover-border; }
+  }
+  .sidebar-category-list-count{
+    display: inline-block;
+    padding: 2px 5px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    /* vertical-align: middle; */
+    background-color: $grey-light;
+    border-radius: 10px;
+    /* float: right; */
+    margin: 0.35em 0.9em 0 0;
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.1);
   }
 }
