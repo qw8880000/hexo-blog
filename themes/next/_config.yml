@@ -836,9 +836,6 @@ version: 6.0.1
 #! custom
 #! ---------------------------------------------------------------
 
-categories_on_sidebar:
-  enable: true
-
 custom_css:
   # the style of post body link
   post_body_a:
