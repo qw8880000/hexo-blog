@@ -3,7 +3,7 @@
   {% set headlessPost = Array.prototype.indexOf.call(['quote', 'picture'], post.type) > -1 %}
 
   {% set post_class = 'post post-type-' + post.type | default('normal') %}
-  {% if post_extra_class > 0 %}
+  {% if post_extra_class !== undefined %}
     {% set post_class = post_class + ' ' + post_extra_class | default('') %}
   {% endif %}
   {% if post.sticky > 0 %}

@@ -11,7 +11,7 @@
 {% block content %}
   <section id="posts" class="posts-expand">
     {% for post in page.posts %}
-      {{ post_template.render(post, true) }}
+      {{ post_template.render(post, true, 'post_in_home') }}
     {% endfor %}
   </section>
 
