@@ -250,7 +250,7 @@ NexT.utils = NexT.$u = {
   },
 
   isGemini: function () {
-    return CONFIG.scheme === 'Gemini';
+    return (CONFIG.scheme === 'Gemini' ||  CONFIG.scheme === 'GeminiEx');
   },
 
   getScrollbarWidth: function () {
