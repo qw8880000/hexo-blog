@@ -7,6 +7,7 @@ $geminiex_sidebar_item_margin_top = 10px;
 
 
 /*--- 去除affix效果 ---*/
+/*
 .affix.affix.affix { position: static; }
 .sidebar-inner {
   &.affix {
@@ -17,6 +18,7 @@ $geminiex_sidebar_item_margin_top = 10px;
     position: static;
   }
 }
+*/
 
 /*--- 链接样式 ---*/
 .post-body
@@ -62,7 +64,9 @@ $geminiex_sidebar_item_margin_top = 10px;
   .sidebar-category-list-link{
     /* display: block; */
     display: inline-block;
-    font-size: 13px;
+    width: 50%;
+    //margin: 0 20px;
+    // font-size: 13px;
     line-height: inherit;
     border-bottom: 1px solid $menu-link-border;
     transition-property: border-color;
@@ -81,7 +85,7 @@ $geminiex_sidebar_item_margin_top = 10px;
     /* vertical-align: middle; */
     background-color: $grey-light;
     border-radius: 10px;
-    /* float: right; */
+    float: right;
     margin: 0.35em 0.9em 0 0;
     text-shadow: 1px 1px 0px rgba(0,0,0,0.1);
   }

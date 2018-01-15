@@ -172,12 +172,12 @@
         </div>
       {% endif %}
 
-    </div>
+      <!-- categories -->
+      {% if theme.scheme === 'GeminiEx' %}
+        {% include '../_custom/_partials/categories.swig' %}
+      {% endif %}
 
-     <!-- categories -->
-     {% if theme.scheme === 'GeminiEx' %}
-       {% include '../_custom/_partials/categories.swig' %}
-     {% endif %}
+    </div>
 
   </aside>
 {% endmacro %}
