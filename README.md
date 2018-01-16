@@ -11,3 +11,8 @@
 1. 把你的文章(.md文件)放入source目录
 1. 执行`hexo server`启动hexo服务
 1. 打开浏览器，输入`http://localhost:4000`查看效果
+
+# 更多
+
+* [hexo](https://hexo.io/zh-cn/)
+* [hexo-theme-next](https://github.com/theme-next/hexo-theme-next)
