@@ -10,5 +10,14 @@ pipeline {
                 '''
             }
         }
+        stage('hello') {
+            steps {
+                sh 'npm --version'
+                sh '''
+                    echo "Multiline shell steps works too"
+                    ls -lah
+                '''
+            }
+        }
     }
 }
